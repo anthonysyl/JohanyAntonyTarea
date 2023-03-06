@@ -1,54 +1,47 @@
 package com.example.trabajitoconeljohan;
 
+import static com.example.trabajitoconeljohan.R.id.et_codigo;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Segunda extends AppCompatActivity {
-    EditText nombreEditText;
-    EditText edadEditText;
-    Button guardarButton;
+    private EditText etCorreo;
+    private EditText etCodigo;
+    private Button btnEnviar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
-        EditText nombreEditText = findViewById(R.id.nombreEditText);
-        EditText edadEditText = findViewById(R.id.codigoEditText);
-        Button guardarButton = findViewById(R.id.guardarButton);
-        guardarButton.setOnClickListener(new View.OnClickListener() {
+        etCorreo = findViewById(R.id.et_correo);
+        etCodigo = findViewById(R.id.et_codigo);
+        btnEnviar = findViewById(R.id.btn_enviar);
+
+        btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombre = nombreEditText.getText().toString();
-                int codigo = Integer.parseInt(edadEditText.getText().toString());
+                Persona persona = crearPersona();
+                Toast.makeText(Segunda.this, "Los datos han sido enviados", Toast.LENGTH_SHORT).show();
 
-                Persona persona = new Persona(nombre, codigo);
-                Intent i  = new Intent(Segunda.this, TercerActivity.class);
-                i.putExtra("persona", (CharSequence) persona);
-                startActivity(i);
+                Intent intent = new Intent(Segunda.this, TercerActivity.class);
+                intent.putExtra("persona", persona);
+                startActivity(intent);
             }
         });
-
     }
-    public class Persona {
-        private String nombre;
-        private int edad;
 
-        public Persona(String nombre, int edad) {
-            this.nombre = nombre;
-            this.edad = edad;
-        }
-
-        public String getNombre() {
-            return nombre;
-        }
-
-        public int getEdad() {
-            return edad;
-        }
+    private Persona crearPersona() {
+        String correo = etCorreo.getText().toString();
+        String codigo = etCodigo.getText().toString();
+        Persona persona = new Persona(correo, codigo);
+        return persona;
     }
 }

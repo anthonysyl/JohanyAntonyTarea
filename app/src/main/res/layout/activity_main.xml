@@ -38,11 +38,12 @@
         android:layout_width="127dp"
         android:layout_height="64dp"
         android:background="@drawable/buttonrounded2"
-        android:text="Ingresar"
+        android:text="Enviar Datos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.827"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeid"
         app:layout_constraintVertical_bias="0.501" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
