@@ -8,7 +8,7 @@
     android:background="@drawable/backgroundgradient">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/codigoEditText"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.542" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/nombreEditText"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.429" />
 
     <Button
-        android:id="@+id/btn_enviar"
+        android:id="@+id/guardarButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/codigoEditText" />
 
     <Button
         android:id="@+id/btn_regresar"
@@ -70,6 +70,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_enviar"
+        app:layout_constraintTop_toBottomOf="@+id/guardarButton"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
