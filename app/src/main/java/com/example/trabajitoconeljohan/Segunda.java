@@ -16,6 +16,8 @@ public class Segunda extends AppCompatActivity {
     private EditText etCorreo;
     private EditText etCodigo;
     private Button btnEnviar;
+    private Button regresar_main;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +37,15 @@ public class Segunda extends AppCompatActivity {
                 intent.putExtra("persona", persona);
                 startActivity(intent);
             }
-        });
-    }
 
+        });
+
+    }
     private Persona crearPersona() {
         String correo = etCorreo.getText().toString();
         String codigo = etCodigo.getText().toString();
         Persona persona = new Persona(correo, codigo);
         return persona;
     }
+
 }

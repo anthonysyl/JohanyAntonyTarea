@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/regresar_btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Segunda"
-    android:background="@drawable/backgroundgradient">
+    android:background="@drawable/backgroundgradient"
+    tools:context=".Segunda">
 
     <EditText
         android:id="@+id/et_codigo"
@@ -72,4 +73,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_enviar"
         app:layout_constraintVertical_bias="0.09" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="142dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_correo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693"
+        tools:srcCompat="@drawable/api" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="31dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_regresar"
+        app:layout_constraintVertical_bias="0.319"
+        app:srcCompat="@drawable/icono" />
 </androidx.constraintlayout.widget.ConstraintLayout>
